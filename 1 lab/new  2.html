@@ -1,0 +1,50 @@
+<html>
+<title> Mostra\Esconde Linhas</title>
+<head>
+<script>
+function Ocultar(linha){
+var objTr = document.getElementById(linha);
+objTr.style.display = "none";
+}
+
+function Mostrar(){
+var objTr = document.getElementsByTagName("tr");
+
+for(var i = 0;i < objTr.length;i++){
+if(objTr[i].style.display == "none")
+objTr[i].style.display = "inline";
+}
+}
+</script>
+</head>
+<body>
+
+<table border=1>
+<tr>
+<td>Senha</td>
+<td>Nome</td>
+<td>Acao</td>
+</tr>
+<tr id="linha1">
+<td>10</td>
+<td>Hugo</td>
+<td><input type="button" id="btn1" value="Ocultar" onclick="Ocultar('linha1');"></td>
+</tr>
+<tr id="linha2" >
+<td>11</td>
+<td>Jose</td>
+<td><input type="button" id="btn1" value="Ocultar" onclick="Ocultar('linha2');"></td>
+</tr>
+<tr id="linha3">
+<td>12</td>
+<td>Luiz</td>
+<td><input type="button" id="btn1" value="Ocultar" onclick="Ocultar('linha3');"></td>
+</tr>
+<tr>
+<td colspan=3 align=center> <input type="button" id="btn2" value="Mostrar" onclick="Mostrar();"></td>
+</tr>
+</table>
+
+</body>
+
+</html>

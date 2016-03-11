@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<style>
+
+table,th,td
+{
+border:1px solid black;
+}
+</style>
+</head>
+
+<body>
+
+<script type = "text/javascript"> 
+function vis() {
+	if (document.getElementById("img").style.visibility == "hidden"){
+		document.getElementById("img").style.visibility = "visible";
+		document.getElementById("mm").value = "Ocultar";
+		document.getElementById("tab").style.top = "280px";
+		document.getElementById("tab").style.left = "100px";
+		}
+			else{
+				document.getElementById("img").style.visibility="hidden";
+				document.getElementById("mm").value="Mostrar";
+				document.getElementById("tab").style.top = "50px";
+				document.getElementById("tab").style.left = "100px";
+				}
+}
+</script> 
+
+<p1><img src = "fotos.jpg" style="position:absolute; top:50px; left:100px;" id = "img"/></p1>
+<p2></p2>
+
+
+<span style="position:absolute; top:280px; left:100px;" id="tab">
+
+<table style="width:430px">
+<tr>
+  <td>Nome</td>
+  <td>Filipe</td>		
+  <td>Miguel</td>
+  <td>Tomas</td>
+  </tr>
+<tr>
+  <td>Apelido</td>
+  <td>Sardinha</td>		
+  <td>Paiva</td>
+  <td>Santos</td>
+  </tr>
+<tr>
+  <td>Numero</td>
+  <td>71035</td>
+  <td>76485</td>		
+  <td>76469</td>
+</tr>
+<tr>
+  <td>Email</td>
+  <td>filipesardinha@msn.com</td>
+  <td>miguelpaiva_07@hotmail.com</td>		
+  <td>tms_95@hotmail.com</td>
+</tr>
+<tr>
+  <td>telefone</td>
+  <td>918115557</td>
+  <td>919704904</td>		
+  <td>919080559</td>
+</tr>
+</table>
+<br><input type="button"  style="position:absolute; left:250px;" value="Ocultar" onclick="vis()" id="mm" />
+</span>
+
+</body>
+
+</html>

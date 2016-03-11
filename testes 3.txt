@@ -1,0 +1,41 @@
+18 anos - M 
+Tarefa 1 
+4 cliques 
+Erros cometidos: 0 
+Tempo para chegar ao menu: 2:23s 
+Tarefa 2 
+7 cliques 
+Erros cometidos: 0 
+Tempo para realizar a tarefa: 5:47s 
+Tarefa 3 
+78 cliques 
+Erros cometidos: 0 
+Tempo para realizar a tarefa: 31.09s 
+
+19 anos - M 
+Tarefa 1 
+4 cliques 
+Erros cometidos: 0 
+Tempo para chegar ao menu: 3:16s 
+Tarefa 2 
+9 cliques 
+Erros cometidos: 0 
+Tempo para realizar a tarefa: 8:28s 
+Tarefa 3 
+74 cliques 
+Erros cometidos: 0 
+Tempo para realizar a tarefa: 35.65s 
+
+53 anos - F 
+Tarefa 1 
+4 cliques 
+Erros cometidos: 0 
+Tempo para chegar ao menu: 3:57s 
+Tarefa 2 
+7 cliques 
+Erros cometidos: 0 
+Tempo para realizar a tarefa: 11:38s 
+Tarefa 3 
+96 cliques 
+Erros cometidos: 0 
+Tempo para realizar a tarefa: 01:50:38s

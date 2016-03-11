@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html>
+<!-- teclas - COMPLETE
+	info transito - COMPLETE	
+	info estacao servico - COMPLETE
+	telefone - MISS
+	assistente - MISS
+	ajuda - MISS
+	temas - 33%
+-->
+<head>
+
+ <meta charset = "UTF-8"/>
+<style>
+table,th,td
+{
+background = "tb.jpg";
+color: white;
+}
+
+</style>
+</head>
+<body background = "road.jpg" onkeydown = "teclado(event)">
+	<script src="js.js"></script> 
+	<textbox id="mt" style="visibility:hidden">1</textbox>
+	<textbox id="monitor" style="visibility:hidden; position:absolute; top:65%; right:52%">0</textbox>
+	<textbox id="ttl" style="visibility:hidden">1</textbox>
+	<textbox id="tb" style="visibility:hidden">5</textbox>
+	<textbox id="tbes" style="visibility:hidden">2</textbox>
+
+<table  background= "tb.jpg" style=" position:absolute; top:70%; right:45%; width:220px; visibility:hidden; font-family:verdana" id="agenda1">
+	<tr>
+		<th align="left">Ana</th>
+	</tr>
+	<tr>
+		<td align="left">David</td>
+	</tr>
+	<tr>
+		<td align="left">Maria</td>
+	</tr>
+	<tr>
+		<td align="left">Tiago</td>
+	</tr>
+	<tr>
+		<td align="left">&#x021B0 - sair</td>
+	</tr>
+</table>
+	
+<table  background= "tb.jpg" style=" position:absolute; top:70%; right:45%; width:220px; visibility:hidden; font-family:verdana" id="menu1">
+	<tr>
+		<th align="left">Agenda</th>
+	</tr>
+	<tr>
+		<td align="left">Teclado</td>
+	</tr>
+	<tr>
+		<td align="left">&#x021B0 - sair</td>
+	</tr>
+</table>
+
+<table  background= "tb.jpg" style=" position:absolute; top:70%; right:45%; width:220px; visibility:hidden; font-family:verdana" id="menu2">
+	<tr>
+		<td align="left">Agenda</td>
+	</tr>
+	<tr>
+		<th align="left">Teclado</th>
+	</tr>
+	<tr>
+		<td align="left">&#x021B0 - sair</td>
+	</tr>
+</table>
+	
+<table  background= "tb.jpg"  style=" position:absolute; top:70%; right:45%; width:220px; font-family:verdana; visibility:hidden" id="teclado1">
+	<tr>
+		<th align = "center" >1</th>
+		<td align = "center">2</td>
+		<td align = "center">3</td>
+	</tr>
+	<tr>
+		<td align = "center">4</td>
+		<td align = "center">5</td>
+		<td align = "center">6</td>
+	</tr>
+	<tr>
+		<td align = "center">7</td>
+		<td align = "center">8</td>
+		<td align = "center">9</td>
+	</tr>
+	<tr>
+		<td background = "tel.jpg"></td>
+		<td align = "center">0</td>
+		<td background = "des.jpg"></td>
+	</tr>
+	</table>
+	
+<table  background= "tb.jpg"  style=" position:absolute; top:70%; right:45%; width:220px; font-family:verdana; visibility:hidden" id="teclado2">
+	<tr>
+		<td align = "center" >1</td>
+		<td align = "center">2</td>
+		<td align = "center">3</td>
+	</tr>
+	<tr>
+		<th align = "center">4</th>
+		<td align = "center">5</td>
+		<td align = "center">6</td>
+	</tr>
+	<tr>
+		<td align = "center">7</td>
+		<td align = "center">8</td>
+		<td align = "center">9</td>
+	</tr>
+	<tr>
+		<td background = "tel.jpg"></td>
+		<td align = "center">0</td>
+		<td background = "des.jpg"></td>
+	</tr>
+	</table>
+	
+<table  background= "tb.jpg"  style=" position:absolute; top:70%; right:45%; width:220px; font-family:verdana; visibility:hidden" id="teclado3">
+	<tr>
+		<td align = "center" >1</td>
+		<td align = "center">2</td>
+		<td align = "center">3</td>
+	</tr>
+	<tr>
+		<td align = "center">4</td>
+		<td align = "center">5</td>
+		<td align = "center">6</td>
+	</tr>
+	<tr>
+		<th align = "center">7</th>
+		<td align = "center">8</td>
+		<td align = "center">9</td>
+	</tr>
+	<tr>
+		<td background = "tel.jpg"></td>
+		<td align = "center">0</td>
+		<td background = "des.jpg"></td>
+	</tr>
+	</table>
+	
+<table  background= "tb.jpg"  style=" position:absolute; top:70%; right:45%; width:220px; font-family:verdana; visibility:hidden" id="teclado4">
+	<tr>
+		<td align = "center" >1</td>
+		<td align = "center">2</td>
+		<td align = "center">3</td>
+	</tr>
+	<tr>
+		<td align = "center">4</td>
+		<td align = "center">5</td>
+		<td align = "center">6</td>
+	</tr>
+	<tr>
+		<td align = "center">7</td>
+		<td align = "center">8</td>
+		<td align = "center">9</td>
+	</tr>
+	<tr>
+		<td background = "tels.jpg"></td>
+		<td align = "center">0</td>
+		<td background = "des.jpg"></td>
+	</tr>
+	</table>
+	
+<table  background= "tb.jpg"  style=" position:absolute; top:70%; right:45%; width:220px; font-family:verdana; visibility:hidden" id="teclado5">
+	<tr>
+		<td align = "center" >1</td>
+		<th align = "center">2</th>
+		<td align = "center">3</td>
+	</tr>
+	<tr>
+		<td align = "center">4</td>
+		<td align = "center">5</td>
+		<td align = "center">6</td>
+	</tr>
+	<tr>
+		<td align = "center">7</td>
+		<td align = "center">8</td>
+		<td align = "center">9</td>
+	</tr>
+	<tr>
+		<td background = "tel.jpg"></td>
+		<td align = "center">0</td>
+		<td background = "des.jpg"></td>
+	</tr>
+	</table>
+	
+<table  background= "tb.jpg"  style=" position:absolute; top:70%; right:45%; width:220px; font-family:verdana; visibility:hidden" id="teclado6">
+	<tr>
+		<td align = "center" >1</td>
+		<td align = "center">2</td>
+		<td align = "center">3</td>
+	</tr>
+	<tr>
+		<td align = "center">4</td>
+		<th align = "center">5</th>
+		<td align = "center">6</td>
+	</tr>
+	<tr>
+		<td align = "center">7</td>
+		<td align = "center">8</td>
+		<td align = "center">9</td>
+	</tr>
+	<tr>
+		<td background = "tel.jpg"></td>
+		<td align = "center">0</td>
+		<td background = "des.jpg"></td>
+	</tr>
+	</table>
+	
+<table  background= "tb.jpg"  style=" position:absolute; top:70%; right:45%; width:220px; font-family:verdana; visibility:hidden" id="teclado7">
+	<tr>
+		<th align = "center" >1</th>
+		<td align = "center">2</td>
+		<td align = "center">3</td>
+	</tr>
+	<tr>
+		<td align = "center">4</td>
+		<td align = "center">5</td>
+		<td align = "center">6</td>
+	</tr>
+	<tr>
+		<td align = "center">7</td>
+		<th align = "center">8</th>
+		<td align = "center">9</td>
+	</tr>
+	<tr>
+		<td background = "tel.jpg"></td>
+		<td align = "center">0</td>
+		<td background = "des.jpg"></td>
+	</tr>
+	</table>
+	
+<table  background= "tb.jpg"  style=" position:absolute; top:70%; right:45%; width:220px; font-family:verdana; visibility:hidden" id="teclado8">
+	<tr>
+		<td align = "center" >1</td>
+		<td align = "center">2</td>
+		<td align = "center">3</td>
+	</tr>
+	<tr>
+		<td align = "center">4</td>
+		<td align = "center">5</td>
+		<td align = "center">6</td>
+	</tr>
+	<tr>
+		<td align = "center">7</td>
+		<td align = "center">8</td>
+		<td align = "center">9</td>
+	</tr>
+	<tr>
+		<td background = "tel.jpg"></td>
+		<th align = "center">0</th>
+		<td background = "des.jpg"></td>
+	</tr>
+	</table>
+	
+<table  background= "tb.jpg"  style=" position:absolute; top:70%; right:45%; width:220px; font-family:verdana; visibility:hidden" id="teclado9">
+	<tr>
+		<td align = "center" >1</td>
+		<td align = "center">2</td>
+		<th align = "center">3</th>
+	</tr>
+	<tr>
+		<td align = "center">4</td>
+		<td align = "center">5</td>
+		<td align = "center">6</td>
+	</tr>
+	<tr>
+		<td align = "center">7</td>
+		<td align = "center">8</td>
+		<td align = "center">9</td>
+	</tr>
+	<tr>
+		<td background = "tel.jpg"></td>
+		<td align = "center">0</td>
+		<td background = "des.jpg"></td>
+	</tr>
+	</table>
+	
+<table  background= "tb.jpg"  style=" position:absolute; top:70%; right:45%; width:220px; font-family:verdana; visibility:hidden" id="teclado10">
+	<tr>
+		<td align = "center" >1</td>
+		<td align = "center">2</td>
+		<td align = "center">3</td>
+	</tr>
+	<tr>
+		<td align = "center">4</td>
+		<td align = "center">5</td>
+		<th align = "center">6</th>
+	</tr>
+	<tr>
+		<td align = "center">7</td>
+		<td align = "center">8</td>
+		<td align = "center">9</td>
+	</tr>
+	<tr>
+		<td background = "tel.jpg"></td>
+		<td align = "center">0</td>
+		<td background = "des.jpg"></td>
+	</tr>
+	</table>
+	
+<table  background= "tb.jpg"  style=" position:absolute; top:70%; right:45%; width:220px; font-family:verdana; visibility:hidden" id="teclado11">
+	<tr>
+		<td align = "center" >1</td>
+		<td align = "center">2</td>
+		<td align = "center">3</td>
+	</tr>
+	<tr>
+		<td align = "center">4</td>
+		<td align = "center">5</td>
+		<td align = "center">6</td>
+	</tr>
+	<tr>
+		<td align = "center">7</td>
+		<td align = "center">8</td>
+		<th align = "center">9</th>
+	</tr>
+	<tr>
+		<td background = "tel.jpg"></td>
+		<td align = "center">0</td>
+		<td background = "des.jpg"></td>
+	</tr>
+	</table>
+
+<table  background= "tb.jpg"  style=" position:absolute; top:70%; right:45%; width:220px; font-family:verdana; visibility:hidden" id="teclado12">
+	<tr>
+		<td align = "center" >1</td>
+		<td align = "center">2</td>
+		<td align = "center">3</td>
+	</tr>
+	<tr>
+		<td align = "center">4</td>
+		<td align = "center">5</td>
+		<td align = "center">6</td>
+	</tr>
+	<tr>
+		<td align = "center">7</td>
+		<td align = "center">8</td>
+		<td align = "center">9</td>
+	</tr>
+	<tr>
+		<td background = "tel.jpg"></td>
+		<td align = "center">0</td>
+		<td background = "dess.jpg"></td>
+	</tr>
+	</table>
+	
+<table  background= "tb.jpg"  style=" position:absolute; top:70%; right:45%; width:220px; font-family:verdana" id="IT">
+	<tr>
+		<th align="left">informacao de transito</th>
+	</tr>
+	<tr>
+		<td align="left">estacao servico</td>
+	</tr>
+	<tr>
+		<td align="left">telefone</td>
+	</tr>
+	<tr>
+		<td align="left">assistente</td>
+	</tr>
+	<tr>
+		<td align="left">ajuda</td>
+	</tr>
+	</table>
+	
+<table  background= "tb.jpg" style=" position:absolute; top:70%; right:45%; width:220px; visibility:hidden; font-family:verdana" id="ES">
+	<tr>
+		<td align="left">informacao de transito</td>
+	</tr>
+	<tr>
+		<th align="left">estacao servico</th>
+	</tr>
+	<tr>
+		<td align="left">telefone</td>
+	</tr>
+	<tr>
+		<td align="left">assistente</td>
+	</tr>
+	<tr>
+		<td align="left">ajuda</td>
+	</tr>
+	</table>
+	
+<table  background= "tb.jpg" style=" position:absolute; top:70%; right:45%; width:220px; visibility:hidden; font-family:verdana" id="TL">
+	<tr>
+		<td align="left">informacao de transito</td>
+	</tr>
+	<tr>
+		<td align="left">estacao servico</td>
+	</tr>
+	<tr>
+		<th align="left">telefone</th>
+	</tr>
+	<tr>
+		<td align="left">assistente</td>
+	</tr>
+	<tr>
+		<td align="left">ajuda</td>
+	</tr>
+	</table>
+	
+<table background= "tb.jpg" style=" position:absolute; top:70%; right:45%; width:220px; visibility:hidden; font-family:verdana" id="AS">
+	<tr>
+		<td align="left">informacao de transito</td>
+	</tr>
+	<tr>
+		<td align="left">estacao servico</td>
+	</tr>
+	<tr>
+		<td align="left">telefone</td>
+	</tr>
+	<tr>
+		<th align="left">assistente</th>
+	</tr>
+	<tr>
+		<td align="left">ajuda</td>
+	</tr>
+	</table>
+	
+<table  background= "tb.jpg" style=" position:absolute; top:70%; right:45%; width:220px; visibility:hidden; font-family:verdana" id="AJ">
+	<tr>
+		<td align="left">informacao de transito</td>
+	</tr>
+	<tr>
+		<td align="left">estacao servico</td>
+	</tr>
+	<tr>
+		<td align="left">telefone</td>
+	</tr>
+	<tr>
+		<td align="left">assistente</td>
+	</tr>
+	<tr>
+		<th align="left">ajuda</th>
+	</tr>
+	</table>
+
+<table  background= "tb.jpg" style=" position:absolute; top:50%; right:45%; width:150px; visibility:hidden" id="tt">
+	<tr>
+		<th style="font-family:verdana">Informacao de Transito</th>
+	</tr>
+	<tr>
+		<td style="font-family:verdana">A5: transito lento <br> IC17: parado</br></td>
+	</tr>
+	<tr>
+		<td align="right">&#x021B0 - sair</td>
+	</tr>
+	</table>
+	
+<table background= "tb.jpg" style=" position:absolute; top:50%; right:45%; width:150px; visibility:hidden" id="tes">
+	<tr>
+		<th style="font-family:verdana">Estacoes de Servico</th>
+	</tr>
+	<tr>
+		<td background = "ab.jpg" style =" height:140px; width:140px">
+	</tr>
+	<tr>
+		<th align="left"> A - 20 Km </th>
+	</tr>
+	<tr>
+		<td> B - 12 Km </td>
+	</tr>
+	<tr>
+		<td align="right">&#x021B0 - sair</td>
+	</tr>
+	</table>
+	
+	<table background= "tb.jpg" style=" position:absolute; top:50%; right:45%; width:150px; visibility:hidden" id="tes2">
+	<tr>
+		<th style="font-family:verdana">Estacoes de Servico</th>
+	</tr>
+	<tr>
+		<td background = "ab.jpg" style ="height:140px; width:140px">
+	</tr>
+	<tr>
+		<td align="left"> A - 20 Km </td>
+	</tr>
+	<tr>
+		<th align ="left"> B - 12 Km </th>
+	</tr>
+	<tr>
+		<td align="right">&#x021B0 - sair</td>
+	</tr>
+	</table>
+	
+		<table background= "tb.jpg" style=" position:absolute; top:50%; right:45%; width:150px; visibility:hidden" id="tes2A">
+	<tr>
+		<th style="font-family:verdana">Estacoes de Servico</th>
+	</tr>
+	<tr>
+		<td background = "b.jpg" style ="height:140px; width:140px" </td>
+	</tr>
+	<tr>
+		<th align="left">a 100M virar a esquerda</th>
+	</tr>
+	<tr>
+		<th align="left"> tempo estimado 6min</th>
+	</tr>
+	<tr>
+		<td align="right">&#x021B0 - sair</td>
+	</tr>
+	</table>
+	
+	<table background= "tb.jpg" style=" position:absolute; top:50%; right:45%; width:150px; visibility:hidden" id="tes2B">
+	<tr>
+		<th style="font-family:verdana">Estacoes de Servico</th>
+	</tr>
+	<tr>
+		<td background = "a.jpg" style ="height:140px; width:140px" </td>
+	</tr>
+	<tr>
+		<th align="left">a 50M virar a direita</th>
+	</tr>
+	<tr>
+		<th align="left"> tempo estimado: 14min</th>
+	</tr>
+	<tr>
+		<td align="right">&#x021B0 - sair</td>
+	</tr>
+	</table>
+	
+	<input type="button" style="position:absolute; top:85%; width:75px; height:35px" value="&#x021B0" onClick = "esconder()" id="cl"/>
+	<input type="button" style="position:absolute; top:78%; width:75px; height:35px" value="ok" onClick = "escolher()" id="ok"/>
+	
+	<input type="button" style="position:absolute; top:85%; right:80%; width:75px; height:35px" value="&#x02193" onClick="arrowUp()" id="au"/>
+	<input type="button" style="position:absolute; top:78%; right:80%; width:75px; height:35px" value="&#x02191" onClick = "arrowDown()" id="ad"/>
+</body>
+
+</html>

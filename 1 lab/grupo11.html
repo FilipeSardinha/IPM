@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ <meta charset = "UTF-8" />
+ <p><a href ="http://web.ist.utl.pt/ist171035/grupo11.html" style="position:absolute; left:550px; color:white;"> http://web.ist.utl.pt/ist171035/grupo11.html</a></p>
+<style>
+table,th,td
+{
+border:1px solid gray;
+}
+</style>
+</head>
+<body background = "background.jpg" >
+	<script type = "text/javascript"> 
+	function vis() {
+		if (document.getElementById("img1").style.visibility == "hidden"){
+			document.getElementById("img1").style.visibility = "visible";
+			document.getElementById("img2").style.visibility = "visible";
+			document.getElementById("img3").style.visibility = "visible";
+			document.getElementById("mm").value = "Ocultar";
+			document.getElementById("tab").style.top = "280px";
+			}
+				else{
+					document.getElementById("img1").style.visibility="hidden";
+					document.getElementById("img2").style.visibility="hidden";
+					document.getElementById("img3").style.visibility="hidden";
+					document.getElementById("mm").value="Mostrar";
+					document.getElementById("tab").style.top = "50px";
+					}
+	}
+	</script> 
+
+	
+	
+	<p1><img src = "filipe.jpg" style="position:absolute; top:50px; left:435px;" id = "img1"/></p1>
+	<p1><img src = "paiva.jpg" style="position:absolute; top:50px; left:655px;" id = "img2"/></p1>
+	<p1><img src = "ipm.jpg" style="position:absolute; top:50px; left:875px;" id = "img3"/></p1>
+
+
+	<span style="position:absolute; top:280px; left:350px" id="tab">
+
+	<table style="width:430px; font-family:verdana;color:white">
+	<tr>
+	  <th>Nome</th>
+	  <td>Filipe</td>		
+	  <td>Miguel</td>
+	  <td>Tom&aacute;s</td>
+	  </tr>
+	<tr>
+	  <th>Apelido</th>
+	  <td>Sardinha</td>		
+	  <td>Paiva</td>
+	  <td>Santos</td>
+	  </tr>
+	<tr>
+	  <th>N&uacute;mero</th>
+	  <td>71035</td>
+	  <td>76485</td>		
+	  <td>76469</td>
+	</tr>
+	<tr>
+	  <th>Email</th>
+	  <td>filipesardinha@msn.com</td>
+	  <td>miguelpaiva_07@hotmail.com</td>		
+	  <td>tms_95@hotmail.com</td>
+	</tr>
+	<tr>
+	  <th>Telefone</th>
+	  <td>918115557</td>
+	  <td>919704904</td>		
+	  <td>919080559</td>
+	</tr>
+	</table>
+		
+
+	</span>
+	<br><input type="button"  style="position:absolute; left:650px; top:450px;"  value="Ocultar" onclick="vis()" id="mm" />
+</body>
+
+</html>

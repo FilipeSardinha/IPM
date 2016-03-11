@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html>
+<!-- teclas - COMPLETE
+	info transito - COMPLETE	
+	info estacao servico - COMPLETE
+	telefone - COMPLETE
+	assistente - MISS
+	ajuda - MISS
+	temas - 33%
+-->
+<head>
+
+ <meta charset = "UTF-8"/>
+<style>
+table,th,td
+{
+background = "tb.png";
+color: white;
+}
+
+</style>
+</head>
+<body background = "road1.jpg" onkeydown = "teclado(event)">
+	<script src="js.js"></script> 
+	<textbox id="contador" style="visibility:visible; color:white">0</textbox>
+	<textbox id="mt" style="visibility:hidden">1</textbox>
+	<textbox id="agenda" style="visibility:hidden">1</textbox>
+	<textbox background="tb.png" id="monitor" style="visibility:hidden; position:absolute; top:65%; right:52%; color:white;">0</textbox>
+	<textbox id="ttl" style="visibility:hidden">1</textbox>
+	<textbox id="tb" style="visibility:hidden">5</textbox>
+	<textbox id="tbes" style="visibility:hidden">2</textbox>
+
+
+<table  background= "tb.png" style=" position:absolute; top:70%; right:45%; width:220px; visibility:hidden; font-family:verdana" id="call">
+	<tr>
+		<th align="left">Número:</th>
+	</tr>
+	<tr>
+		<th align="left" id = "cell">0</iframe></th>
+	</tr>
+	<tr>
+		<td align="center">Dura&#231&#227o</td>
+	</tr>
+	<tr>
+		<td align="center">00:00:09</td>
+	</tr>
+	<tr>
+		<td><img src="des.jpg"></td>
+	</tr>
+</table>
+	
+<table  background= "tb.png" style=" position:absolute; top:50%; right:45%; width:220px; visibility:hidden; font-family:verdana" id="call1">
+	<tr>
+		<th align="left">Ana</th>
+	</tr>
+	<tr>
+		<td align="center">Dura&#231&#227o</td>
+	</tr>
+	<tr>
+		<td align="center">00:03:29</td>
+	</tr>
+	<tr>
+		<td><img src="des.jpg"></td>
+	</tr>
+</table>
+
+<table  background= "tb.png" style=" position:absolute; top:50%; right:45%; width:220px; visibility:hidden; font-family:verdana" id="todo">
+	<tr>
+		<td> UPS!!</td>
+	</tr>
+	<tr>
+		<td style="width:25px; height:25px"><img src="todo.png"></td>
+	</tr>
+	<tr>
+		<td> Fica Para a Próxima! ;) </td>
+	</tr>
+</table>
+
+<table  background= "tb.png" style=" position:absolute; top:50%; right:45%; width:220px; visibility:hidden; font-family:verdana" id="call2">
+	<tr>
+		<th align="left">David</th>
+	</tr>
+	<tr>
+		<td align="center">Dura&#231&#227o</td>
+	</tr>
+	<tr>
+		<td align="center">00:02:09</td>
+	</tr>
+	<tr>
+		<td><img src="des.jpg"></td>
+	</tr>
+</table>
+
+<table  background= "tb.png" style=" position:absolute; top:50%; right:45%; width:220px; visibility:hidden; font-family:verdana" id="call3">
+	<tr>
+		<th align="left">Maria</th>
+	</tr>
+	<tr>
+		<td align="center">Dura&#231&#227o</td>
+	</tr>
+	<tr>
+		<td align="center">00:00:45</td>
+	</tr>
+	<tr>
+		<td><img src="des.jpg"></td>
+	</tr>
+</table>
+
+<table  background= "tb.png" style=" position:absolute; top:50%; right:45%; width:220px; visibility:hidden; font-family:verdana" id="call4">
+	<tr>
+		<th align="left">Tiago</th>
+	</tr>
+	<tr>
+		<td align="center">Dura&#231&#227o</td>
+	</tr>
+	<tr>
+		<td align="center">00:10:03</td>
+	</tr>
+	<tr>
+		<td><img src="des.jpg"></td>
+	</tr>
+</table>
+	
+<table  background= "tb.png" style=" position:absolute; top:50%; right:45%; width:220px; visibility:hidden; font-family:verdana" id="agenda1">
+	<tr>
+		<th colspan="2" align="left">Agenda</th>
+	</tr>
+	<tr>
+		<td style="width:25px; height:25px"><img src="girl.png"></td>
+		<th align="left">Ana</th>
+	</tr>
+	<tr>
+		<td style="width:25px; height:25px"><img src="boy.png"></td>
+		<td align="left">David</td>
+	</tr>
+	<tr>
+		<td style="width:25px; height:25px"><img src="girl.png"></td>
+		<td align="left">Maria</td>
+	</tr>
+	<tr>
+		<td style="width:25px; height:25px"><img src="boy.png"></td>
+		<td align="left">Tiago</td>
+	</tr>
+	<tr>
+		<td align="left">&#x021B0 - Sair</td>
+	</tr>
+</table>
+
+<table  background= "tb.png" style=" position:absolute; top:50%; right:45%; width:220px; visibility:hidden; font-family:verdana" id="agenda2">
+	<tr>
+		<th colspan="2" align="left">Agenda</th>
+	</tr>
+	<tr>
+		<td style="width:25px; height:25px"><img src="girl.png"></td>
+		<td align="left">Ana</td>
+	</tr>
+	<tr>
+		<td style="width:25px; height:25px"><img src="boy.png"></td>
+		<th align="left">David</th>
+	</tr>
+	<tr>
+		<td style="width:25px; height:25px"><img src="girl.png"></td>
+		<td align="left">Maria</td>
+	</tr>
+	<tr>
+		<td style="width:25px; height:25px"><img src="boy.png"></td>
+		<td align="left">Tiago</td>
+	</tr>
+	<tr>
+		<td align="left">&#x021B0 - Sair</td>
+	</tr>
+</table>
+
+<table  background= "tb.png" style=" position:absolute; top:50%; right:45%; width:220px; visibility:hidden; font-family:verdana" id="agenda3">
+	<tr>
+		<th colspan="2" align="left">Agenda</th>
+	</tr>
+	<tr>
+		<td style="width:25px; height:25px"><img src="girl.png"></td>
+		<td align="left">Ana</td>
+	</tr>
+	<tr>
+		<td style="width:25px; height:25px"><img src="boy.png"></td>
+		<td align="left">David</td>
+	</tr>
+	<tr>
+		<td style="width:25px; height:25px"><img src="girl.png"></td>
+		<th align="left">Maria</th>
+	</tr>
+	<tr>
+		<td style="width:25px; height:25px"><img src="boy.png"></td>
+		<td align="left">Tiago</td>
+	</tr>
+	<tr>
+		<td align="left">&#x021B0 - Sair</td>
+	</tr>
+</table>
+
+<table  background= "tb.png" style=" position:absolute; top:50%; right:45%; width:220px; visibility:hidden; font-family:verdana" id="agenda4">
+	<tr>
+		<th colspan="2" align="left">Agenda</th>
+	</tr>
+	<tr>
+		<td style="width:25px; height:25px"><img src="girl.png"></td>
+		<td align="left">Ana</td>
+	</tr>
+	<tr>
+		<td style="width:25px; height:25px"><img src="boy.png"></td>
+		<td align="left">David</td>
+	</tr>
+	<tr>
+		<td style="width:25px; height:25px"><img src="girl.png"></td>
+		<td align="left">Maria</td>
+	</tr>
+	<tr>
+		<td style="width:25px; height:25px"><img src="boy.png"></td>
+		<th align="left">Tiago</th>
+	</tr>
+	<tr>
+		<td align="left">&#x021B0 - Sair</td>
+	</tr>
+</table>
+	
+<table  background= "tb.png" style=" position:absolute; top:50%; right:45%; width:220px; visibility:hidden; font-family:verdana" id="menu1">
+	<tr>
+		<td style="width:25px; height:25px"><img src="contacts.png"></td>
+		<th align="left">Agenda</th>
+	</tr>
+	<tr>
+		<td style="width:25px; height:25px"><img src="tt.png"></td>
+		<td align="left">Teclado</td>
+	</tr>
+	<tr>
+		<td align="left">&#x021B0 - Sair</td>
+	</tr>
+</table>
+
+<table  background= "tb.png" style=" position:absolute; top:50%; right:45%; width:220px; visibility:hidden; font-family:verdana" id="menu2">
+	<tr>
+		<td style="width:25px; height:25px"><img src="contacts.png"></td>
+		<td align="left">Agenda</td>
+	</tr>
+	<tr>
+		<td style="width:25px; height:25px"><img src="tt.png"></td>
+		<th align="left">Teclado</th>
+	</tr>
+	<tr>
+		<td align="left">&#x021B0 - Sair</td>
+	</tr>
+</table>
+	
+<table  background= "tb.png"  style=" position:absolute; top:70%; right:45%; width:220px; font-family:verdana; visibility:hidden" id="teclado1">
+	<tr style="width:75px">
+		<th align = "center" ><mark>1</mark></th>
+		<td align = "center">2</td>
+		<td align = "center">3</td>
+	</tr>
+	<tr style="width:75px">
+		<td align = "center">4</td>
+		<td align = "center">5</td>
+		<td align = "center">6</td>
+	</tr>
+	<tr style="width:75px">
+		<td align = "center">7</td>
+		<td align = "center">8</td>
+		<td align = "center">9</td>
+	</tr>
+	<tr style="width:75px">
+		<td background = "tel.jpg" style="width:75px"></td>
+		<td align = "center" style="width:75px">0</td>
+		<td style="width:75px" align="right">Apagar</td>
+	</tr>
+	</table>
+	
+<table  background= "tb.png"  style=" position:absolute; top:70%; right:45%; width:220px; font-family:verdana; visibility:hidden" id="teclado2">
+	<tr style="width:75px">
+		<td align = "center" >1</td>
+		<td align = "center">2</td>
+		<td align = "center">3</td>
+	</tr>
+	<tr style="width:75px">
+		<th align = "center"><mark>4</mark></th>
+		<td align = "center">5</td>
+		<td align = "center">6</td>
+	</tr>
+	<tr style="width:75px">
+		<td align = "center">7</td>
+		<td align = "center">8</td>
+		<td align = "center">9</td>
+	</tr>
+	<tr style="width:75px">
+		<td background = "tel.jpg" style="width:75px"></td>
+		<td align = "center" style="width:75px">0</td>
+		<td style="width:75px" align="right">Apagar</td>
+	</tr>
+	</table>
+	
+<table  background= "tb.png"  style=" position:absolute; top:70%; right:45%; width:220px; font-family:verdana; visibility:hidden" id="teclado3">
+	<tr style="width:75px">
+		<td align = "center" >1</td>
+		<td align = "center">2</td>
+		<td align = "center">3</td>
+	</tr>
+	<tr style="width:75px">
+		<td align = "center">4</td>
+		<td align = "center">5</td>
+		<td align = "center">6</td>
+	</tr>
+	<tr style="width:75px">
+		<th align = "center"><mark>7</mark></th>
+		<td align = "center">8</td>
+		<td align = "center">9</td>
+	</tr>
+	<tr style="width:75px">
+		<td background = "tel.jpg" style="width:75px"></td>
+		<td align = "center" style="width:75px">0</td>
+		<td style="width:75px" align="right">Apagar</td>
+	</tr>
+	</table>
+	
+<table  background= "tb.png"  style=" position:absolute; top:70%; right:45%; width:220px; font-family:verdana; visibility:hidden" id="teclado4">
+	<tr style="width:75px">
+		<td align = "center" >1</td>
+		<td align = "center">2</td>
+		<td align = "center">3</td>
+	</tr>
+	<tr style="width:75px">
+		<td align = "center">4</td>
+		<td align = "center">5</td>
+		<td align = "center">6</td>
+	</tr>
+	<tr style="width:75px">
+		<td align = "center">7</td>
+		<td align = "center">8</td>
+		<td align = "center">9</td>
+	</tr>
+	<tr style="width:75px">
+		<td background = "tels.jpg" style="width:75px"></td>
+		<td align = "center" style="width:75px">0</td>
+		<td style="width:75px" align="right">Apagar</td>
+	</tr>
+	</table>
+	
+<table  background= "tb.png"  style=" position:absolute; top:70%; right:45%; width:220px; font-family:verdana; visibility:hidden" id="teclado5">
+	<tr style="width:75px">
+		<td align = "center" >1</td>
+		<th align = "center"><mark>2</mark></th>
+		<td align = "center">3</td>
+	</tr>
+	<tr style="width:75px">
+		<td align = "center">4</td>
+		<td align = "center">5</td>
+		<td align = "center">6</td>
+	</tr>
+	<tr style="width:75px">
+		<td align = "center">7</td>
+		<td align = "center">8</td>
+		<td align = "center">9</td>
+	</tr>
+	<tr style="width:75px">
+		<td background = "tel.jpg" style="width:75px"></td>
+		<td align = "center" style="width:75px">0</td>
+		<td style="width:75px" align="right">Apagar</td>
+	</tr>
+	</table>
+	
+<table  background= "tb.png"  style=" position:absolute; top:70%; right:45%; width:220px; font-family:verdana; visibility:hidden" id="teclado6">
+	<tr style="width:75px">
+		<td align = "center" >1</td>
+		<td align = "center">2</td>
+		<td align = "center">3</td>
+	</tr>
+	<tr style="width:75px">
+		<td align = "center">4</td>
+		<th align = "center"><mark>5</mark></th>
+		<td align = "center">6</td>
+	</tr>
+	<tr style="width:75px">
+		<td align = "center">7</td>
+		<td align = "center">8</td>
+		<td align = "center">9</td>
+	</tr>
+	<tr style="width:75px">
+		<td background = "tel.jpg" style="width:75px"></td>
+		<td align = "center" style="width:75px">0</td>
+		<td style="width:75px" align="right">Apagar</td>
+	</tr>
+	</table>
+	
+<table  background= "tb.png"  style=" position:absolute; top:70%; right:45%; width:220px; font-family:verdana; visibility:hidden" id="teclado7">
+	<tr style="width:75px">
+		<td align = "center" >1</td>
+		<td align = "center">2</td>
+		<td align = "center">3</td>
+	</tr>
+	<tr style="width:75px">
+		<td align = "center">4</td>
+		<td align = "center">5</td>
+		<td align = "center">6</td>
+	</tr>
+	<tr style="width:75px">
+		<td align = "center">7</td>
+		<th align = "center"><mark>8</mark></th>
+		<td align = "center">9</td>
+	</tr>
+	<tr style="width:75px">
+		<td background = "tel.jpg" style="width:75px"></td>
+		<td align = "center" style="width:75px">0</td>
+		<td style="width:75px" align="right">Apagar</td>
+	</tr>
+	</table>
+	
+<table  background= "tb.png"  style=" position:absolute; top:70%; right:45%; width:220px; font-family:verdana; visibility:hidden" id="teclado8">
+	<tr style="width:75px">
+		<td align = "center" >1</td>
+		<td align = "center">2</td>
+		<td align = "center">3</td>
+	</tr>
+	<tr style="width:75px">
+		<td align = "center">4</td>
+		<td align = "center">5</td>
+		<td align = "center">6</td>
+	</tr>
+	<tr style="width:75px">
+		<td align = "center">7</td>
+		<td align = "center">8</td>
+		<td align = "center">9</td>
+	</tr>
+	<tr style="width:75px">
+		<td background = "tel.jpg" style="width:75px"></td>
+		<th align = "center" style="width:75px"><mark>0</mark></th>
+		<td style="width:75px" align="right">Apagar</td>
+	</tr>
+	</table>
+	
+<table  background= "tb.png"  style=" position:absolute; top:70%; right:45%; width:220px; font-family:verdana; visibility:hidden" id="teclado9">
+	<tr style="width:75px">
+		<td align = "center" >1</td>
+		<td align = "center">2</td>
+		<th align = "center"><mark>3</mark></th>
+	</tr>
+	<tr style="width:75px">
+		<td align = "center">4</td>
+		<td align = "center">5</td>
+		<td align = "center">6</td>
+	</tr>
+	<tr style="width:75px">
+		<td align = "center">7</td>
+		<td align = "center">8</td>
+		<td align = "center">9</td>
+	</tr>
+	<tr style="width:75px">
+		<td background = "tel.jpg" style="width:75px"></td>
+		<td align = "center" style="width:75px">0</td>
+		<td style="width:75px" align="right">Apagar</td>
+	</tr>
+	</table>
+	
+<table  background= "tb.png"  style=" position:absolute; top:70%; right:45%; width:220px; font-family:verdana; visibility:hidden" id="teclado10">
+	<tr style="width:75px">
+		<td align = "center" >1</td>
+		<td align = "center">2</td>
+		<td align = "center">3</td>
+	</tr>
+	<tr style="width:75px">
+		<td align = "center">4</td>
+		<td align = "center">5</td>
+		<th align = "center"><mark>6</mark></th>
+	</tr>
+	<tr style="width:75px">
+		<td align = "center">7</td>
+		<td align = "center">8</td>
+		<td align = "center">9</td>
+	</tr>
+	<tr style="width:75px">
+		<td background = "tel.jpg" style="width:75px"></td>
+		<td align = "center" style="width:75px">0</td>
+		<td style="width:75px" align="right">Apagar</td>
+	</tr>
+	</table>
+	
+<table  background= "tb.png"  style=" position:absolute; top:70%; right:45%; width:220px; font-family:verdana; visibility:hidden" id="teclado11">
+	<tr style="width:75px">
+		<td align = "center" >1</td>
+		<td align = "center">2</td>
+		<td align = "center">3</td>
+	</tr>
+	<tr style="width:75px">
+		<td align = "center">4</td>
+		<td align = "center">5</td>
+		<td align = "center">6</td>
+	</tr>
+	<tr style="width:75px">
+		<td align = "center">7</td>
+		<td align = "center">8</td>
+		<th align = "center"><mark>9</mark></th>
+	</tr>
+	<tr style="width:75px">
+		<td background = "tel.jpg" style="width:75px"></td>
+		<td align = "center" style="width:75px">0</td>
+		<td style="width:75px" align="right">Apagar</td>
+	</tr>
+	</table>
+
+<table  background= "tb.png"  style=" position:absolute; top:70%; right:45%; width:220px; font-family:verdana; visibility:hidden" id="teclado12">
+	<tr style="width:75px">
+		<td align = "center" >1</td>
+		<td align = "center">2</td>
+		<td align = "center">3</td>
+	</tr>
+	<tr style="width:75px">
+		<td align = "center">4</td>
+		<td align = "center">5</td>
+		<td align = "center">6</td>
+	</tr>
+	<tr style="width:75px">
+		<td align = "center">7</td>
+		<td align = "center">8</td>
+		<td align = "center">9</td>
+	</tr>
+	<tr style="width:75px">
+		<td background = "tel.jpg" style="width:75px"></td>
+		<td align = "center" style="width:75px">0</td>
+		<td style="width:75px" align="right"><mark>Apagar</mark></td>
+	</tr>
+	</table>
+	
+<table  background= "tb.png"  style=" position:absolute; top:50%; right:45%; width:220px; visibility:visible; font-family:verdana" id="IT">
+	<tr>
+		<td style="width:25px; height:25px"><img src="info.png"></td>
+		<th align="left">Informa&#231&#227o de Trânsito</th>
+	</tr>
+	<tr>
+		<td style="width:25px; height:25px"><img src="es.png"></td>
+		<td align="left">Esta&#231&#227o Servi&#231o</td>
+	</tr>
+	<tr>
+		<td style="width:25px; height:25px"><img src="t.png"></td>
+		<td align="left">Telefone</td>
+	</tr>
+	<tr>
+		<td style="width:25px; height:25px"><img src="as.png"></td>
+		<td align="left">Assistente</td>
+	</tr>
+	<tr>
+		<td style="width:25px; height:25px"><img src="h.png"></td>
+		<td align="left">Ajuda</td>
+	</tr>
+	</table>
+	
+<table  background= "tb.png" style=" position:absolute; top:50%; right:45%; width:220px; visibility:hidden; font-family:verdana" id="ES">
+	<tr>
+		<td style="width:25px; height:25px"><img src="info.png"></td>
+		<td align="left">Informa&#231&#227o de Trânsito</td>
+	</tr>
+	<tr>
+		<td style="width:25px; height:25px"><img src="es.png"></td>
+		<th align="left">Esta&#231&#227o Servi&#231o</th>
+	</tr>
+	<tr>
+		<td style="width:25px; height:25px"><img src="t.png"></td>
+		<td align="left">Telefone</td>
+	</tr>
+	<tr>
+		<td style="width:25px; height:25px"><img src="as.png"></td>
+		<td align="left">Assistente</td>
+	</tr>
+	<tr>
+		<td style="width:25px; height:25px"><img src="h.png"></td>
+		<td align="left">Ajuda</td>
+	</tr>
+	</table>
+	
+<table  background= "tb.png" style=" position:absolute; top:50%; right:45%; width:220px; visibility:hidden; font-family:verdana" id="TL">
+	<tr>
+		<td style="width:25px; height:25px"><img src="info.png"></td>
+		<td align="left">Informa&#231&#227o de Trânsito</td>
+	</tr>
+	<tr>
+		<td style="width:25px; height:25px"><img src="es.png"></td>
+		<td align="left">Esta&#231&#227o Servi&#231o</td>
+	</tr>
+	<tr>
+		<td style="width:25px; height:25px"><img src="t.png"></td>
+		<th align="left">Telefone</th>
+	</tr>
+	<tr>
+		<td style="width:25px; height:25px"><img src="as.png"></td>
+		<td align="left">Assistente</td>
+	</tr>
+	<tr>
+		<td style="width:25px; height:25px"><img src="h.png"></td>
+		<td align="left">Ajuda</td>
+	</tr>
+	</table>
+	
+<table background= "tb.png" style=" position:absolute; top:50%; right:45%; width:220px; visibility:hidden; font-family:verdana" id="AS">
+	<tr>
+		<td style="width:25px; height:25px"><img src="info.png"></td>
+		<td align="left">Informa&#231&#227o de Trânsito</td>
+	</tr>
+	<tr>
+		<td style="width:25px; height:25px"><img src="es.png"></td>
+		<td align="left">Esta&#231&#227o Servi&#231o</td>
+	</tr>
+	<tr>
+		<td style="width:25px; height:25px"><img src="t.png"></td>
+		<td align="left">Telefone</td>
+	</tr>
+	<tr>
+		<td style="width:25px; height:25px"><img src="as.png"></td>
+		<th align="left">Assistente</th>
+	</tr>
+	<tr>
+		<td style="width:25px; height:25px"><img src="h.png"></td>
+		<td align="left">Ajuda</td>
+	</tr>
+	</table>
+	
+<table  background= "tb.png" style=" position:absolute; top:50%; right:45%; width:220px; visibility:hidden; font-family:verdana" id="AJ">
+	<tr>
+		<td style="width:25px; height:25px"><img src="info.png"></td>
+		<td align="left">Informa&#231&#227o de Trânsito</td>
+	</tr>
+	<tr>
+		<td style="width:25px; height:25px"><img src="es.png"></td>
+		<td align="left">Esta&#231&#227o Servi&#231o</td>
+	</tr>
+	<tr>
+		<td style="width:25px; height:25px"><img src="t.png"></td>
+		<td align="left">Telefone</td>
+	</tr>
+	<tr>
+		<td style="width:25px; height:25px"><img src="as.png"></td>
+		<td align="left">Assistente</td>
+	</tr>
+	<tr>
+		<td style="width:25px; height:25px"><img src="h.png"></td>
+		<th align="left">Ajuda</th>
+	</tr>
+	</table>
+
+<table  background= "tb.png" style=" position:absolute; top:50%; right:45%; width:150px; visibility:hidden" id="tt">
+	<tr>
+		<td style="width:25px; height:25px"><img src="car.png"></td>
+		<th style="font-family:verdana">Informa&#231ão de Trânsito</th>
+	</tr>
+	<tr>
+		<td style="width:25px; height:25px"><img src="r.png"></td>
+		<td style="font-family:verdana">A5: Trânsito lento</td>
+	</tr>
+	<tr>
+		<td style="width:25px; height:25px"><img src="o.png"></td>
+		<td style="font-family:verdana">IC17: Parado</td>
+	</tr>
+	<tr>
+		<td align="right">&#x021B0 - sair</td>
+	</tr>
+	</table>
+	
+<table background= "tb.png" style=" position:absolute; top:50%; right:45%; width:150px; visibility:hidden" id="tes">
+	<tr>
+		<th style="font-family:verdana">Esta&#231&#245es de Servi&#231o</th>
+	</tr>
+	<tr>
+		<td background = "ab.jpg" style =" height:140px; width:140px">
+	</tr>
+	<tr>
+		<th align="left"> A - 20 Km </th>
+	</tr>
+	<tr>
+		<td> B - 12 Km </td>
+	</tr>
+	<tr>
+		<td align="right">&#x021B0 - Sair</td>
+	</tr>
+	</table>
+	
+	<table background= "tb.png" style=" position:absolute; top:50%; right:45%; width:150px; visibility:hidden" id="tes2">
+	<tr>
+		<th style="font-family:verdana">Esta&#231&#245es de Servi&#231o</th>
+	</tr>
+	<tr>
+		<td background = "ab.jpg" style ="height:140px; width:140px">
+	</tr>
+	<tr>
+		<td align="left"> A - 20 Km </td>
+	</tr>
+	<tr>
+		<th align ="left"> B - 12 Km </th>
+	</tr>
+	<tr>
+		<td align="right">&#x021B0 - Sair</td>
+	</tr>
+	</table>
+	
+		<table background= "tb.png" style=" position:absolute; top:40%; right:45%; width:150px; visibility:hidden" id="tes2A">
+	<tr>
+		<th style="font-family:verdana">Esta&#231&#245es de Servi&#231o</th>
+	</tr>
+	<tr>
+		<td background = "b.jpg" style ="height:140px; width:140px" </td>
+	</tr>
+	<tr>
+		<th align="left">A 100M virar à esquerda</th>
+	</tr>
+	<tr>
+		<th align="left"> Tempo estimado 6min</th>
+	</tr>
+	<tr>
+		<td align="right">&#x021B0 - Sair</td>
+	</tr>
+	</table>
+	
+	<table background= "tb.png" style=" position:absolute; top:40%; right:45%; width:150px; visibility:hidden" id="tes2B">
+	<tr>
+		<th style="font-family:verdana">Esta&#231&#245es de Servi&#231o</th>
+	</tr>
+	<tr>
+		<td background = "a.jpg" style ="height:140px; width:140px" </td>
+	</tr>
+	<tr>
+		<th align="left">A 50M virar à direita</th>
+	</tr>
+	<tr>
+		<th align="left"> Tempo estimado: 14min</th>
+	</tr>
+	<tr>
+		<td align="right">&#x021B0 - Sair</td>
+	</tr>
+	</table>
+	<!--
+	<input type="button" style="position:absolute; top:85%; width:75px; height:35px" value="&#x021B0" onClick = "esconder()" id="cl"/>
+	<input type="button" style="position:absolute; top:78%; width:75px; height:35px" value="ok" onClick = "escolher()" id="ok"/>
+	
+	<input type="button" style="position:absolute; top:85%; right:80%; width:75px; height:35px" value="&#x02193" onClick="arrowUp()" id="au"/>
+	<input type="button" style="position:absolute; top:78%; right:80%; width:75px; height:35px" value="&#x02191" onClick = "arrowDown()" id="ad"/>
+	--> 
+</body>
+
+</html>
